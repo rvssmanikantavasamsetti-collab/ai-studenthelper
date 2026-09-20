@@ -192,7 +192,7 @@ function Dashboard() {
         <Card>
           <h2 className="font-display text-lg font-bold">Subject Progress</h2>
           <div className="mt-4 space-y-4">
-            {useStats(tasks).subjects.map((s) => (
+            {subjects.map((s) => (
               <div key={s.subject}>
                 <div className="mb-1.5 flex justify-between text-xs">
                   <span className="text-foreground/80">{s.subject}</span>
