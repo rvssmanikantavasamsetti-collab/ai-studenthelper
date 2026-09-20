@@ -30,7 +30,7 @@ function greeting() {
 
 function Dashboard() {
   const { tasks, toggleTask } = useStudyFlow();
-  const { completed, pending, completion, studyHours } = useStats(tasks);
+  const { completed, pending, completion, studyHours, subjects } = useStats(tasks);
   const ranked = sortByPriority(pending);
   const today = ranked.filter((t) => daysUntil(t.deadline) <= 2).slice(0, 4);
   const plan = today.length ? today : ranked.slice(0, 3);
